@@ -1,0 +1,5 @@
+.HorizontalLine {
+  height: 1px;
+  background: #444; /* horizontal line color */
+  flex-shrink: 0;   /* don’t let it shrink away */
+}

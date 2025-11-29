@@ -1,0 +1,59 @@
+html, body, #root {
+  font-family: sans-serif;
+
+  --font-size-large: 1.2rem;
+  --font-size-very-large: 1.5rem;
+  --header-height: 50px;
+}
+
+* {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height); /* total header height */
+  color: white;
+  z-index: 10;
+
+  /* flex: 0 0 50px; */
+  display: flex;
+  flex-direction: column; /* stack text & line vertically */
+  justify-content: center; /* center text vertically within available space */
+}
+
+.header-text {
+    flex: 1;               /* take up available space above the line */
+    font-weight: bold;
+    display: flex;
+    align-items: center;   /* vertically center text */
+    padding: 1rem;
+    font-size: var(--font-size-very-large);
+  }
+
+  .content {
+    /* margin-top: 60px; match the header height */
+    /* background: #f4f4f4; */
+    overflow-y: auto;
+  }
+
+.bottom-sheet {
+  position: fixed;
+  bottom: -100%; /* Start mostly hidden off-screen */
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--header-height));
+  background: white;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  transition: bottom 0.3s ease;
+}
+
+.bottom-sheet.open {
+  bottom: 0; /* Slide up into view */
+}

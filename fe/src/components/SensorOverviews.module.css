@@ -1,0 +1,28 @@
+.sensorOverviewName  {
+        width: 65%;
+        font-weight: bold;
+        font-size: var(--font-size-large);
+        padding-left: 1rem;
+        padding-top: 0.5rem;
+}
+
+.sensorOverviewValue {
+        width: 15%;
+        text-align: right;
+}
+
+.sensorOverviewUnit {
+        width: 5%;
+}
+
+.sensorOverviewAge {
+        width: 15%;
+        color: #888;
+}
+
+.sensorOverviews {
+        color: blue;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

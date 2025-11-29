@@ -1,0 +1,72 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sensorHeader {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* height: var(--header-height); total header height */
+  color: white;
+  z-index: 10;
+
+  /* flex: 0 0 50px; */
+  display: flex;
+  flex-direction: column; /* stack text & line vertically */
+  justify-content: center; /* center text vertically within available space */
+}
+
+
+.headerTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cardHeaderText {
+    flex: 1;               /* take up available space above the line */
+    font-weight: bold;
+    display: flex;
+    align-items: center;   /* vertically center text */
+    padding: 1rem;
+    font-size: var(--font-size-very-large);
+}
+  
+.cardCloseButton {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #888;
+  margin-right: 0.5rem;
+  font-size: var(--font-size-large);
+}
+
+
+.observationHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.observationHeaderText {
+  display: flex;
+  font-size: var(--font-size-large);
+  margin: 0.5rem 0 0.5rem 1.0rem;
+}
+
+.observationHeaderSummary {
+  display: flex;
+  font-size: var(--font-large);
+  margin-right: 1.0rem;
+  margin-left: auto;
+}
+
+.chartContainer {
+  margin: 0 0.5rem 0 0.5rem;
+}

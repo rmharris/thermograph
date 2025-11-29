@@ -1,0 +1,15 @@
+[Unit]
+Description=Thermograph sensor base station
+After=network.target
+
+[Service]
+DynamicUser=yes
+SupplementaryGroups=rfm70
+EnvironmentFile=/etc/base.conf
+ExecStart=/usr/local/bin/base -d $DEVICE -c $CHANNEL -e $ENDPOINT
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

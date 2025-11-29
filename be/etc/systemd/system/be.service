@@ -1,0 +1,16 @@
+[Unit]
+Description=Thermograph back end
+After=network.target
+
+[Service]
+DynamicUser=yes
+RuntimeDirectory=be
+WorkingDirectory=/run/be
+EnvironmentFile=/etc/be.conf
+ExecStart=/usr/local/bin/be -d $DBPATH -p $PORT -f $FEPATH
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
