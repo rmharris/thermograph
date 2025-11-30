@@ -3,7 +3,8 @@ packets received by the radio and forwards them via a REST API to the back end.
 
 The reference hardware for the base station is a Rapsberry Pi Zero 2 W with
 either an RFM70 or an nRF24L01(+) transceiver.  A suitable Device Tree overlay
-and driver should be installed, both provided by linux-rfm70.
+and driver should be installed, both provided by
+[linux-rfm70](https://github.com/rmharris/linux-rfm70).
 
 Modify etc/base.conf to specify the character device for the radio, the sensor
 channel and the location of the backend.  Then run 'make install'.
